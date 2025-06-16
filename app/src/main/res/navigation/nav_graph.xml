@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/introFragment">
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.example.test.IntroFragment"
+        android:label="Intro"
+        tools:layout="@layout/fragment_intro">
+        <action
+            android:id="@+id/action_introFragment_to_sensorFragment"
+            app:destination="@+id/sensorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sensorFragment"
+        android:name="com.example.test.SensorFragment"
+        android:label="Sensor"
+        tools:layout="@layout/fragment_sensor">
+        <action
+            android:id="@+id/action_sensorFragment_to_endFragment"
+            app:destination="@+id/endFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="com.example.test.EndFragment"
+        android:label="End"
+        tools:layout="@layout/fragment_end" />
+</navigation>
